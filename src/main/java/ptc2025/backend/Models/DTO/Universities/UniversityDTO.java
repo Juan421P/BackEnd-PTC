@@ -7,10 +7,8 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.UUID;
-
 @Getter @Setter @ToString @EqualsAndHashCode
-public class UniversityDTO{
+public class UniversityDTO {
     private String universityID;
     @NotBlank (message = "El nombre de la Universidad no puede quedar vacio")
     private String universityName;

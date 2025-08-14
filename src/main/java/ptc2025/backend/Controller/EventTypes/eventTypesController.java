@@ -19,7 +19,7 @@ import java.util.Map;
 @RequestMapping("/apiEventTypes")
 public class eventTypesController {
     @Autowired
-    private eventTypesService service;
+    eventTypesService service;
 
     //Get
     @GetMapping("/getDataEventType")
@@ -27,7 +27,7 @@ public class eventTypesController {
         return service.getEventTypes();
     }
     //Post
-    @PostMapping("newEventType")
+    @PostMapping("/newEventType")
     public ResponseEntity<Map<String, Object>> registrarTipoEvento(
             @Valid @RequestBody eventTypesDTO dtoEvento,
             HttpServletRequest request){
@@ -74,7 +74,7 @@ public class eventTypesController {
         }catch (RuntimeException e) {
             return ResponseEntity.status(HttpStatus.NOT_FOUND).body(Map.of(
                     "status", "error",
-                    "message", "Universidad no encontrada",
+                    "message", "Evento no encontrada",
                     "detail", e.getMessage()
             ));
         }
