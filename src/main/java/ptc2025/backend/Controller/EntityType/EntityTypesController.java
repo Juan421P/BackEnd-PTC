@@ -1,7 +1,9 @@
 package ptc2025.backend.Controller.EntityType;
 
+import jakarta.persistence.Entity;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -19,6 +21,8 @@ import java.util.Map;
 @RestController
 @RequestMapping ("/apiEntityType")
 public class EntityTypesController{
+
+    @Autowired
     EntityTypesService service;
     @GetMapping("/getEntityType")
     public List<EntityTypesDTO> getEntityType(){

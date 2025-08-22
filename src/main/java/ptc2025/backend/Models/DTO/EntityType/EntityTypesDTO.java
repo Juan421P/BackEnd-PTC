@@ -23,5 +23,5 @@ public class EntityTypesDTO {
     private String entityType;
 
     @Pattern(regexp = "^[YN]$", message = "Solo puede responder 'Y' o 'N'")
-    private Character isAutoCodeEnabled;
+    private String isAutoCodeEnabled;
 }

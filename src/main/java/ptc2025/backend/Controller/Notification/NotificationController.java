@@ -2,6 +2,7 @@ package ptc2025.backend.Controller.Notification;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -18,6 +19,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/apiNotifications")
 public class NotificationController {
+    @Autowired
     NotificationService service;
     @GetMapping("/getEvaluationPlanComponents")
     public List<NotificationDTO> getNotification(){

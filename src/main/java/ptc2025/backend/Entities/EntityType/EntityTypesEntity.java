@@ -28,5 +28,5 @@ public class EntityTypesEntity {
     private String entityType;
 
     @Column(name = "ISAUTOCODEENABLED")
-    private Character isAutoCodeEnabled;
+    private String isAutoCodeEnabled;
 }

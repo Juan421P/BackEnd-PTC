@@ -1,7 +1,9 @@
 package ptc2025.backend.Controller.StudentDocument;
 
+import jakarta.persistence.Access;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -18,6 +20,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/apiStudentsDocuements")
 public class StudentDocumentsController {
+    @Autowired
     StudentDocumentsService service;
 
     @GetMapping("/getStudentsDocuements")

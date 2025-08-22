@@ -2,6 +2,7 @@ package ptc2025.backend.Controller.DataAuditLog;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.validation.Valid;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
@@ -18,7 +19,8 @@ import java.util.Map;
 @RestController
 @RequestMapping("/apiDataAuditLog")
 public class DataAuditLogController {
-    DataAuditLogService service;
+    @Autowired
+    private DataAuditLogService service;
     @GetMapping("/getDataAuditLog")
     public List<DataAuditLogDTO> getDataAuditLog(){
         return  service.getDataAuditLog();

@@ -37,10 +37,12 @@ public class EntityTypesService {
             throw new IllegalArgumentException("El tipo de entidad no debe tener más de 60 caracteres");
         }
 
+
         if (dto.getIsAutoCodeEnabled() != null &&
-                !(dto.getIsAutoCodeEnabled() == 'Y' || dto.getIsAutoCodeEnabled() == 'N')) {
+                !(dto.getIsAutoCodeEnabled().equals("Y") || dto.getIsAutoCodeEnabled().equals("N"))) {
             throw new IllegalArgumentException("Solo puede ser 'Y' o 'N'");
         }
+
 
         try {
             EntityTypesEntity entity = convertirAEntity(dto);
