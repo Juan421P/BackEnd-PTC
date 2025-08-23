@@ -22,13 +22,13 @@ public class StudentCycleEnrollmentController {
     private StudentCycleEnrollmentService service;
 
     // GET
-    @GetMapping("/getEnrollments")
+    @GetMapping("/getStudentCycleEnrollments")
     public List<StudentCycleEnrollmentDTO> getEnrollments() {
         return service.getEnrollments();
     }
 
     // POST
-    @PostMapping("/insertEnrollment")
+    @PostMapping("/insertStudentCycleEnrollment")
     public ResponseEntity<Map<String, Object>> insertEnrollment(@Valid @RequestBody StudentCycleEnrollmentDTO dto, BindingResult binding) {
         if (binding.hasErrors()) {
             Map<String, String> errors = new HashMap<>();
@@ -50,7 +50,7 @@ public class StudentCycleEnrollmentController {
     }
 
     // PUT
-    @PutMapping("/updateEnrollment/{id}")
+    @PutMapping("/updateStudentCycleEnrollment/{id}")
     public ResponseEntity<Map<String, Object>> updateEnrollment(@PathVariable String id, @Valid @RequestBody StudentCycleEnrollmentDTO dto, BindingResult binding) {
         if (binding.hasErrors()) {
             Map<String, String> errors = new HashMap<>();
@@ -72,7 +72,7 @@ public class StudentCycleEnrollmentController {
     }
 
     // DELETE
-    @DeleteMapping("/deleteEnrollment/{id}")
+    @DeleteMapping("/deleteStudentCycleEnrollment/{id}")
     public ResponseEntity<Map<String, Object>> deleteEnrollment(@PathVariable String id) {
         try {
             if (!service.deleteEnrollment(id)) {

@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/Departments")
+@RequestMapping("/api/Departments")
 public class DepartmentsController {
 
     @Autowired
@@ -48,7 +48,7 @@ public class DepartmentsController {
             ));
         }
     }
-    @PutMapping("/editarUsuario/{ID}")
+    @PutMapping("/updateDepartment/{ID}")
     public ResponseEntity<?> modificarUsuario(@PathVariable String ID, @Valid @RequestBody DepartmentsDTO json, BindingResult bindingResult){
 
         if(bindingResult.hasErrors()){
@@ -72,7 +72,7 @@ public class DepartmentsController {
         }
     }
 
-    @DeleteMapping("/eliminarRegistro/{ID}")
+    @DeleteMapping("/deleteDeparment/{ID}")
     public ResponseEntity<?> eliminarUsuario(@PathVariable String ID){
         try{
             if(!service.deleteDepartment(ID)){

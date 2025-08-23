@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiDataAuditLog")
+@RequestMapping("/api/DataAuditLog")
 public class DataAuditLogController {
     @Autowired
     private DataAuditLogService service;

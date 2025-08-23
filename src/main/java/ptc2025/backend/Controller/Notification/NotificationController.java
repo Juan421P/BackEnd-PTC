@@ -17,11 +17,11 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiNotifications")
+@RequestMapping("/api/Notifications")
 public class NotificationController {
     @Autowired
     NotificationService service;
-    @GetMapping("/getEvaluationPlanComponents")
+    @GetMapping("/getNotifications")
     public List<NotificationDTO> getNotification(){
         return  service.getNotification();
     }

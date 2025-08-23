@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiLocality")
+@RequestMapping("/api/Locality")
 public class LocalitiesController {
     @Autowired
     LocalitiesService service;

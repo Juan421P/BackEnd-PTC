@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiEvaluationPlanComponents")
+@RequestMapping("/api/EvaluationPlanComponents")
 public class PlanComponentsController {
     @Autowired
     PlanComponentsService service;

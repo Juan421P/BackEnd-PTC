@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("SubjectTeachers")
+@RequestMapping("/api/SubjectTeachers")
 public class SubjectTeachersController {
 
     @Autowired

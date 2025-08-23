@@ -22,10 +22,10 @@ public class EmployeeRolesController {
     @Autowired
     private EmployeeRolesService services;
 
-    @GetMapping("/getAllServices")
+    @GetMapping("/getEmpleyeeRoles")
     public List<EmployeeRolesDTO> getData() { return services.getAllEmployeeRoles(); }
 
-    @PostMapping("/AddEmployeeRole")
+    @PostMapping("/AddEmployeeRoles")
     public ResponseEntity<?> NuevoEmployeeRole(@Valid @RequestBody EmployeeRolesDTO json, HttpServletRequest request){
         try{
             EmployeeRolesDTO respuesta = services.insertarDatos(json);

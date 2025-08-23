@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/Pensum")
+@RequestMapping("/api/Pensum")
 public class PensumController {
 
     @Autowired

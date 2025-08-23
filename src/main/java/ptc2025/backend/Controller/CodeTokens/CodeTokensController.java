@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiCodeToken")
+@RequestMapping("/api/CodeToken")
 public class CodeTokensController {
     @Autowired
     CodeTokensService service;
@@ -55,7 +55,7 @@ public class CodeTokensController {
         }
     }
     //Put
-    @PutMapping ("/uploadCodeToken")
+    @PutMapping ("/uploadCodeToken/{id}")
     public ResponseEntity<?> uploadCodeToken(
             @PathVariable String id,
             @Valid @RequestBody CodeTokensDTO dto,
@@ -81,7 +81,7 @@ public class CodeTokensController {
         }
     }
     //Delete
-    @DeleteMapping("/deleteCodeToken")
+    @DeleteMapping("/deleteCodeToken/{id}")
     public ResponseEntity <Map<String, Object>> deleteCodeToken(@PathVariable String id){
         try {
             if (!service.deleteToken(id)){

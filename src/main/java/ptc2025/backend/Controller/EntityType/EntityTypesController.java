@@ -19,7 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping ("/apiEntityType")
+@RequestMapping ("/api/EntityType")
 public class EntityTypesController{
 
     @Autowired

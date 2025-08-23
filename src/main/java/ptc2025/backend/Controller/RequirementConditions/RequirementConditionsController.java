@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/RequirementConditions")
+@RequestMapping("/api/RequirementConditions")
 public class RequirementConditionsController {
 
     @Autowired

@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiSystemRol")
+@RequestMapping("/api/SystemRol")
 public class systemRolesController {
     @Autowired
     private systemRolesService services;
@@ -80,7 +80,7 @@ public class systemRolesController {
         }
 
     }
-    @DeleteMapping("/eliminarUniversidad/{id}")
+    @DeleteMapping("/eliminarSystemRol/{id}")
     public ResponseEntity <Map<String, Object>> eliminarRol(@PathVariable String id){
         try {
             if(!services.deleteSystemRoles(id)){

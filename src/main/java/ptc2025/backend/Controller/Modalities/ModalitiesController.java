@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/Modalities")
+@RequestMapping("/api/Modalities")
 public class ModalitiesController {
     @Autowired
     private ModalityService service;
@@ -25,7 +25,7 @@ public class ModalitiesController {
     @GetMapping("/getModalities")
     public List<ModalitiesDTO> getData() { return service.getAllModalities(); }
 
-    @PostMapping("/RegistroModality")
+    @PostMapping("/insertModality")
     public ResponseEntity<?> nuevaModality(@Valid @RequestBody ModalitiesDTO json, HttpServletRequest request){
         try {
             ModalitiesDTO respuesta = service.insertarDatos(json);
@@ -50,7 +50,7 @@ public class ModalitiesController {
         }
     }
 
-    @PutMapping("/ActualizarModalities/{id}")
+    @PutMapping("/updateModalities/{id}")
     public ResponseEntity<?> modificarModalities(@PathVariable String id, @Valid @RequestBody ModalitiesDTO json, BindingResult bindingResult){
         if (bindingResult.hasErrors()){
             Map<String, String> errores = new HashMap<>();
@@ -70,7 +70,7 @@ public class ModalitiesController {
         }
     }
 
-    @DeleteMapping("/EliminarModality/{id}")
+    @DeleteMapping("/deleteModality/{id}")
     public ResponseEntity<?> eliminarModality(@PathVariable String id){
         try{
             if (!service.eliminarModality(id)){

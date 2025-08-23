@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiEventTypes")
+@RequestMapping("/api/EventTypes")
 public class eventTypesController {
     @Autowired
     eventTypesService service;

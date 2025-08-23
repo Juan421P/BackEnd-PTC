@@ -17,7 +17,7 @@ import java.util.Map;
 
 
 @RestController
-@RequestMapping("/apiUniversity") //los endPoint se anteceden de la palabra api
+@RequestMapping("/api/University") //los endPoint se anteceden de la palabra api
 public class UniversityController {
     @Autowired
     private UniversityServices services;
@@ -54,7 +54,7 @@ public class UniversityController {
         }
     }
     //Put
-    @PutMapping("/modificar/{id}")
+    @PutMapping("/updateUniversity/{id}")
     public ResponseEntity<?> modificarUniversidad(
             @PathVariable String id,
             @Valid @RequestBody UniversityDTO dto,
@@ -83,7 +83,7 @@ public class UniversityController {
 
     }
     //Delete
-    @DeleteMapping("/eliminarUniversidad/{id}")
+    @DeleteMapping("/deleteUniversity/{id}")
     public ResponseEntity <Map<String, Object>> eliminarUniversidad(@PathVariable String id){
         try {
             if(!services.elminarUniversidad(id)){

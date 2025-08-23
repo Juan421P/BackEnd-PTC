@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiSocialService")
+@RequestMapping("/api/SocialService")
 public class SocialServiceController {
     @Autowired
     private SocialServiceServices services;
@@ -75,7 +75,7 @@ public class SocialServiceController {
             ));
         }
     }
-    @DeleteMapping("/deleteLocation/{id}")
+    @DeleteMapping("/deleteSocialService/{id}")
     public ResponseEntity<Map<String, Object>> eliminarLocalidad(@PathVariable String id){
         try{
             if(!services.eliminarServicioSocial(id)){

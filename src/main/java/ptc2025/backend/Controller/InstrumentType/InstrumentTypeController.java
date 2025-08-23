@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiInstrumentType")
+@RequestMapping("/api/InstrumentType")
 public class InstrumentTypeController {
     @Autowired
     InstrumentTypeService service;

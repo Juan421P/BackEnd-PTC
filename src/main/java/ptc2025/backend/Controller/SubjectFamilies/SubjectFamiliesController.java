@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/SubjectFamilies")
+@RequestMapping("/api/SubjectFamilies")
 public class SubjectFamiliesController {
 
     @Autowired

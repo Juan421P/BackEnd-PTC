@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/AcademicLevels")
+@RequestMapping("/api/AcademicLevels")
 public class AcademicLevelsController {
 
     @Autowired

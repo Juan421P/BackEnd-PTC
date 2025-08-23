@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiAcademicYear")
+@RequestMapping("/api/AcademicYear")
 public class AcademicYearController {
     @Autowired
     private AcademicYearService service;

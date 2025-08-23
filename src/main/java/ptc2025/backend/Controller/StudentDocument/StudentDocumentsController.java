@@ -18,7 +18,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiStudentsDocuements")
+@RequestMapping("/api/StudentsDocuements")
 public class StudentDocumentsController {
     @Autowired
     StudentDocumentsService service;
@@ -55,7 +55,7 @@ public class StudentDocumentsController {
 
     }
 
-    @PutMapping("/updateStudentsDocuements/{id}")
+    @PutMapping("/updateStudentsDocuement/{id}")
     public ResponseEntity<?> updateDataAuditLog(
             @PathVariable String id,
             @Valid @RequestBody StudentDocumentsDTO dto,
@@ -82,7 +82,7 @@ public class StudentDocumentsController {
 
 
     }
-    @DeleteMapping("/deleteStudentsDocuements/{id}")
+    @DeleteMapping("/deleteStudentsDocuement/{id}")
     public ResponseEntity<Map<String, Object>> deleteStudentsDocuements( @PathVariable String id){
         try {
             if (!service.deleteStudentDocument(id)){

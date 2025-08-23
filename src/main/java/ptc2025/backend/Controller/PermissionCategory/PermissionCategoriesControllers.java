@@ -16,7 +16,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/PermissionCategories")
+@RequestMapping("/api/PermissionCategories")
 public class PermissionCategoriesControllers {
 
     @Autowired

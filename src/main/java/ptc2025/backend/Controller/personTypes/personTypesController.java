@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiTypesPerson")
+@RequestMapping("/api/TypesPerson")
 public class personTypesController {
     @Autowired
     private personTypesService services;

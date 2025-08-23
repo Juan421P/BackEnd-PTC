@@ -17,7 +17,7 @@ import java.util.List;
 import java.util.Map;
 
 @RestController
-@RequestMapping("/apiFacultyCorrelative")
+@RequestMapping("/api/FacultyCorrelative")
 public class facultyCorrelativesController {
     @Autowired
     private facultyCorrelativesService services;
