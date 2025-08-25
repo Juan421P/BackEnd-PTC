@@ -21,9 +21,6 @@ public class RequirementsService {
     @Autowired
     private UniversityRespository repoUniversity;
 
-    @Autowired
-    private UniversityRespository repoUniversity;
-
     public List<RequirementsDTO> getAllRequirements(){
         List<RequirementsEntity> requirement = repo.findAll();
         return requirement.stream()

@@ -21,9 +21,6 @@ public class DocumentCategoriesService {
     @Autowired
     private UniversityRespository repoUniversity;
 
-    @Autowired
-    UniversityRespository repoUniversity;
-
     public List<DocumentCategoriesDTO> getDocumentCategories() {
         List<DocumentCategoriesEntity> documentCtype = repo.findAll();
         return documentCtype.stream()
