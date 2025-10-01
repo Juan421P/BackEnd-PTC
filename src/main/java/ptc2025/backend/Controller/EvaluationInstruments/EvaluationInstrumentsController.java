@@ -64,7 +64,7 @@ public class EvaluationInstrumentsController {
         }
     }
 
-    @PutMapping("/updateEvaluationInstrument")
+    @PutMapping("/updateEvaluationInstrument/{id}")
     public ResponseEntity<?> updateEvaluationInstrument(@PathVariable String id, @Valid @RequestBody EvaluationInstrumentsDTO json, BindingResult bindingResult){
         if(bindingResult.hasErrors()){
             Map<String, String> errores = new HashMap<>();
@@ -85,7 +85,7 @@ public class EvaluationInstrumentsController {
         }
     }
 
-    @DeleteMapping("/deleteEvaluationInstrument")
+    @DeleteMapping("/deleteEvaluationInstrument/{id}")
     public ResponseEntity<?> deleteEvaluationInstrument(@PathVariable String id){
         try{
             if(!service.deleteEvaluation(id)){
